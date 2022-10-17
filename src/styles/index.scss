@@ -1,0 +1,298 @@
+@import "~bootstrap/scss/bootstrap";
+
+$light: #ffff;
+$primary: #bfbfbf;
+$secondary: #cccccc;
+$tertiary: #66ffff;
+$dark: black;
+
+body,
+p {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.flex-column {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn_one {
+  width: 9rem;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: $light;
+}
+
+.btn_two {
+  width: 9rem;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: $tertiary;
+}
+
+.btn_three {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: $light;
+}
+
+.btn_four {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: $primary;
+  font-weight: bold;
+}
+
+input {
+  border-radius: 5px;
+}
+
+.input-file {
+  display: none;
+}
+
+.input_group {
+  position: relative;
+}
+
+.input_label_one {
+  position: absolute;
+  margin-left: -4rem;
+}
+
+.input_label_two {
+  position: absolute;
+  margin-left: -6rem;
+}
+
+.input_label_three {
+  position: absolute;
+  margin-left: -10rem;
+}
+
+.nav {
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 2px solid $dark;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .link {
+    width: 25%;
+    padding: 1rem;
+    text-align: center;
+    background-color: $primary;
+    color: $dark;
+    text-decoration: none;
+    &:not(:last-child) {
+      border-right: 2px solid $dark;
+    }
+  }
+
+  .active {
+    background: $light;
+  }
+}
+
+// Chats
+.group-chat_header {
+  border: 2px solid $dark;
+  border-radius: 5px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-close {
+  border: 3px solid $dark;
+}
+
+.group-chat_body {
+  border: 2px solid $dark;
+  border-radius: 5px;
+  height: 25rem;
+  border-top: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  overflow-y: scroll;
+}
+
+.group-chat_username {
+  font-weight: bold;
+}
+
+.group-chat_footer {
+  border: 2px solid $dark;
+  border-radius: 5px;
+  padding: 1rem;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.group-chat_input {
+  flex: 1;
+  border: 2px solid $dark;
+  margin: 0 1rem 0 1rem;
+  border-radius: 5px;
+}
+
+.group-chat_button {
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  border-radius: 7px;
+  background-color: white;
+}
+
+.table-wrapper {
+  border-radius: 5px;
+  border: 2px solid $dark;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+table {
+  width: 100%;
+  overflow: auto;
+}
+
+th {
+  background-color: #cccccc;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  width: 33%;
+}
+
+td:not(:first-child),
+th:not(:first-child) {
+  text-align: center;
+}
+
+td:not(:last-child),
+th:not(:last-child) {
+  border-right: 2px solid $dark;
+}
+
+tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+.action {
+  border: none;
+  background-color: transparent;
+}
+
+.modal-header {
+  border-bottom: 3px solid $dark;
+  padding: 2px;
+}
+
+.modal-body {
+  .row {
+    align-items: center;
+    height: 3rem;
+  }
+}
+
+.modal-content {
+  border: 3px solid $dark;
+}
+
+.question {
+  width: 3rem;
+  height: 3rem;
+}
+
+.m-body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-footer {
+  border-top: none;
+  justify-content: center;
+}
+
+// edit user
+.edit-user {
+  height: 15rem;
+}
+
+// manage documents
+.add-upload {
+  width: 9rem;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: $tertiary;
+}
+
+.add-file-input {
+  width: 18rem;
+}
+
+// modal close btn
+.btn-m-close {
+  background: transparent;
+  border-radius: 5px;
+  width: 2rem;
+  height: 2rem;
+}
+
+.extra {
+  font-weight: lighter;
+}
+
+.add_sharing {
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.custom_user_select {
+  border: 2px solid black;
+  width: 20rem;
+  border-radius: 5px;
+  padding: 2px;
+  text-align: center;
+  text-align-last: center;
+  margin: 0 1rem 0 1rem;
+}
+
+select option {
+  background-color: #ffff;
+  border: 2px solid black;
+  border-radius: 30px;
+}
