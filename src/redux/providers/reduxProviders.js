@@ -1,8 +1,12 @@
 import storage from "redux-persist/lib/storage";
-import { combineReducers, createStore, compose } from "redux";
+import {
+  combineReducers,
+  legacy_createStore as createStore,
+  compose,
+  applyMiddleware,
+} from "redux";
 import { persistReducer, persistStore } from "redux-persist";
 import { userReducer } from "../reducers";
-import { applyMiddleware } from "redux";
 import thunkMiddleWare from "redux-thunk";
 
 // Root Reducer
