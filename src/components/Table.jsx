@@ -10,10 +10,6 @@ const Table = ({
   onEdit = null,
   onDelete = null,
   onRemove = null,
-  onShare = null,
-  currentUser = null,
-  name = null,
-  anchorKey = null,
 }) => {
   const renderAddUpload = () => {
     return (
@@ -22,7 +18,7 @@ const Table = ({
           <td>
             <Btn
               className="add-upload"
-              label="Add Upload"
+              label="Add User"
               onClickHandler={onAddUpload}
             />
           </td>

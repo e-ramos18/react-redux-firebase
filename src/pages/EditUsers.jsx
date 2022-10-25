@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Btn, Title } from "../components";
 import { useDispatch, useSelector } from "react-redux";
 import { startUpdatingUser } from "../redux/actions/userActions";
+import { validatEmail } from "../utils";
 
 const EditUsers = () => {
   const user = useSelector((state) => state.userReducer.user);
@@ -24,6 +25,8 @@ const EditUsers = () => {
       return alert("Please enter email.");
     } else if (user?.name === name && user?.email === email) {
       return alert("No changes were made.");
+    } else if (validatEmail(email)) {
+      return alert("Please add a valid email");
     }
     const updatedUser = {
       id: user.id,

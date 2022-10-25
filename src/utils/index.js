@@ -10,38 +10,6 @@ export const validatEmail = (value) => {
 };
 
 /**
- * Get an item from localStorage
- * @param {string} item
- * @returns object|string|number
- */
-export const getItem = (item) => {
-  const result = localStorage.getItem(item);
-  return JSON.parse(result);
-};
-
-/**
- * Check if a user is logged in.
- * @returns boolean
- */
-export const isUserLoggedIn = () => {
-  return getItem("token") !== null;
-};
-
-/**
- * Set an item in the local storage.
- * @param {string} key
- * @param {object|string|number} value
- */
-export const setItem = (key, value) => {
-  localStorage.setItem(key, JSON.stringify(value));
-};
-
-export const formatDate = (d) => {
-  const idx = d.indexOf(".");
-  return d.replace(/T/g, " ").substring(idx, 0);
-};
-
-/**
  * Set an item in the local storage.
  * @param {Number} rowCount
  * @param {Number} columnCount

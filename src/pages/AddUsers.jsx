@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Btn, Title } from "../components";
 import { startAddingUser } from "../redux/actions/userActions";
+import { validatEmail } from "../utils";
 
 const AddUsers = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,8 @@ const AddUsers = () => {
       return alert("Please enter name.");
     } else if (!email) {
       return alert("Please enter email.");
+    } else if (validatEmail(email)) {
+      return alert("Please add a valid email");
     }
     dispatch(
       startAddingUser({
